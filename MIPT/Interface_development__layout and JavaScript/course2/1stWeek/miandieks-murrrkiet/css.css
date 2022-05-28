@@ -4,6 +4,32 @@
     list-style: none;
     min-width: 200px;
 }
+
+.toggle:checked ~ .cats,
+.toggle:checked ~ .cats .cat  {
+    width: 100%;
+    max-width: 100%;
+}
+
+.toggle:checked ~ .cats .cat  {
+    height: 200px;
+}
+
+.toggle:checked ~ .cats .cat .cat__photo,
+.toggle:checked ~ .cats .cat .cat__info,
+.toggle:checked ~ .cats .cat .cat__description
+ {
+    width: 30%;
+    height: 180px;
+    float: left;
+    margin: 5px;
+    overflow: hidden;
+}
+.toggle:checked ~ .cats .cat .cat_photo img {
+    width: 30px;
+}
+
+
 .cats .cat {
     float: left;
     border: 1px dotted #333;
@@ -70,13 +96,14 @@
     font-size: 0.9em;
     text-decoration: line-through;
 }
+
 .cats .cat .cat__description {
     font-size: 0.9em;
     color: #666;
     overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  line-height: 1.3em;
-  height: 3.9em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.3em;
+    height: 3.9em;
 }
