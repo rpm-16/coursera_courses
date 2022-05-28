@@ -1,0 +1,71 @@
+body {
+    font-size: 16px;
+}
+
+.cat__info__rate fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.cat__info__rate_group {
+    position: relative;  
+    width: 100px;
+    height: 20px;
+    background-image: url('./images/staroff.svg');
+}
+
+
+.ratingstar {
+    margin: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    font-size: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
+
+.ratingstar:focus{
+    outline: none;
+}
+
+.ratingstar:checked,
+.ratingstar:hover
+{
+    background-image: url('./images/staron.svg');
+}
+
+/* не равботает почему? */
+.ratingstar:hover ~ .ratingstar
+ {
+    background-image: url('./images/staroff.svg'); 
+}
+
+
+.cat__info__rate_group input:nth-of-type(5){
+    z-index: 1;
+    width: 100px;
+}
+
+.cat__info__rate_group input:nth-of-type(4){
+    z-index: 2;
+    width: 80px;
+}
+
+.cat__info__rate_group input:nth-of-type(3){
+    z-index: 3;
+    width: 60px;
+}
+
+.cat__info__rate_group input:nth-of-type(2){
+    z-index: 4;
+    width: 40px;
+}
+
+.cat__info__rate_group input:nth-of-type(1){
+    z-index: 5;
+    width: 20px;
+}
