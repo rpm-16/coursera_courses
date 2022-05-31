@@ -9,11 +9,16 @@
 </head>
 <body>
     <div class="wrapper">
+        <input name="slider" id="b1" type="radio" class="radioButton1"  checked>
+        <input name="slider" id="b2" type="radio" class="radioButton2">
+        <input name="slider" id="b3" type="radio" class="radioButton3">
+        <input name="slider" id="b4" type="radio" class="radioButton3">
+
         <ul class="good__cards">
             <li>
                 <div class="good__card">
                     <div class="good__card__img">
-                        <a href="#openModal"><img src="./img/1.png" alt="parsley"></a>
+                        <a href="#openModal1"><img src="./img/1.png" alt="parsley"></a>
                     </div>
                     <div class="good__card__description">
                         -1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem praesentium,
@@ -167,25 +172,11 @@
                     </div>
                 </div>
             </li>
-        </ul>
-        <ul class="control">
-            <li>
-                <input name="slider" type="radio" class="radioButton1">
-            </li>
-            <li>
-                <input name="slider" type="radio" class="radioButton2">
-            </li>
-            <li>
-                <input name="slider" type="radio" class="radioButton3">
-            </li>
-        </ul>
+       </ul>
     </div>
 
-    <input name="close" type="checkbox" class="close">
-    <div class="modal">
-        <div class="image">
-            <img src="./img/1.png" alt="1">
-        </div>
-    </div>
-</body>
+    <div id="openModal1" class="modal"  aria-hidden="true">
+        <a href="#close" class="btn-close" aria-hidden="true">X</a>  
+        <img class="image">    
+    </div> 
 </html>

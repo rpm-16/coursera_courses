@@ -4,9 +4,17 @@ body {
 }
 
 .wrapper {
-    width: 1200px;
+    max-width: 1200px;
     box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
+    height: 380px;
+}
+
+.wrapper input {
+    position: relative;
+    top: 220px;
+    z-index: 50;
 }
 
 .good__cards {
@@ -33,6 +41,8 @@ body {
 
 .good__cards .good__card .good__card__img {
     text-align:  center;
+    overflow: hidden;
+    height: 180px;
 }
 
 .good__cards .good__card .good__card__img img {
@@ -55,53 +65,13 @@ body {
     display: block;
 }
 
-.control {
-    list-style: none;
+.controls {
     position: absolute;
-    right: 50%;
-    top: 200px;
-    z-index: 100;
-}
-.control li {
-    float: left;
+    top: 210px;
+    right: 47%;
 }
 
-.radioButton1:checked ~ .good__cards {
-    right: 0px;
-}
-.radioButton2:checked ~ .good__cards {
-    right: -1200px;
-}
-.radioButton3:checked ~ .good__cards {
-    right: -2400px;
-}
-
-.modal {
-    background-color: #333;
-    opacity: 0.7;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 200;    
-}
-
-.close { 
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    z-index: 800;
-    display: none;
-}
-
-.close:checked ~ .modal {
-    display: none;
-}
-
-.modal .image{
-    position: relative;
-    top: 150px;
-    left: 30%;
-    max-width: 50%;  
-    opacity: 1;
-    z-index: 300;  
-}
+#b1:checked ~ .good__cards {right: 0px;transition: 0.5s;}
+#b2:checked ~ .good__cards {right: 900px;transition: 0.5s;}
+#b3:checked ~ .good__cards {right: 1800px;transition: 0.5s;}
+#b4:checked ~ .good__cards {right: 2400px;transition: 0.5s;}
